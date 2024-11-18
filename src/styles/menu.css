@@ -1,0 +1,67 @@
+#navbar-brand { 
+    transition: 1s;
+}
+
+@keyframes grow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  #navbar-brand {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  #navbar-brand.visible {
+    height: 70px;
+    animation: fadeIn 0.5s forwards;
+  }
+
+  #navbar-nav {
+    backdrop-filter: blur(15px);
+    height: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+  
+#navbar{
+    transition: 2s;
+      backdrop-filter: blur(15px);
+      padding-bottom: 10px;
+      display: block;
+      margin: auto !important;
+      padding-left: 10%;
+      padding-right: 10%;
+      width: 100%;
+      transition: 1s;
+      position: fixed;
+      transition: 0.8s;
+    }
+    
+    #navbar::after{
+      
+      transition: 0.4s;
+    }
+    
+    #navbar::before{
+      
+      transition: 0.4s;
+    }
+li {
+    color: white;
+}

@@ -1,1 +1,12 @@
+@font-face {
+    font-family: primary;
+    src: url(/src/assets/fonts/breakaway.ttf) format('truetype');
+}
 
+h1 {
+    font-family: primary;
+}
+
+html {
+    scroll-behavior: smooth;
+}

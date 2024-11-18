@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Menu from './Components/menu'
-import "/src/App.css"
+import "/src/App.scss"
 import Home from './pages/home'
+
 
 function App() {
   const [count, setCount] = useState(0)
