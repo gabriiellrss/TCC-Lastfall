@@ -17,7 +17,7 @@ const VideoComponent = () => {
           maskComposite: 'intersect',
         }}
       >
-        <source src="assets/SVG/Coca Cola 4K Commercial Product Video.mp4" type="video/mp4" />
+        <source src="./src/assets/Night City 8 Bit Live Wallpaper.mp4" type="video/mp4" />
       </video>
 
       {/* O código comentado do fundo pode ser ativado descomentando a próxima div */}

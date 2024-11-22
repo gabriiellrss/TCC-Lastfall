@@ -33,10 +33,11 @@ export default function Menu() {
 
       <div id="navbar-nav" className="nav-item d-flex justify-content-center align-items-center">
         <ul className="nav column-gap-3">
-          <li className="nav-item">Home</li>
-          <li className="nav-item">Quem somos</li>
-          <li className="nav-item">Sinopse</li>
-          <li className="nav-item">Contato</li>
+          <li><a className='nav-item nav-link text-white' href="#">Home</a></li>
+          <li><a className='nav-item nav-link text-white' href="#quemsomos">Quem somos</a></li>
+          <li><a className='nav-item nav-link text-white' href="#sinopse">Sinopse</a></li>
+          <li><a className='nav-item nav-link text-white' href="#contato">Contato</a></li>
+          <li><a className='nav-item nav-link text-white' href="">Download</a></li>
         </ul>
       </div>
     </menu>

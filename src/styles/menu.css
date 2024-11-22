@@ -32,7 +32,6 @@
   }
 
   #navbar-nav {
-    backdrop-filter: blur(15px);
     height: 30px;
     display: flex;
     justify-items: center;
