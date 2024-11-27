@@ -1,29 +1,47 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Menu from './Components/menu'
-import "/src/App.scss"
-import Home from './pages/home'
-
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import "/src/App.scss";
+import Home from './pages/home.jsx';
+import Menu from './Components/menu';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showMenu, setShowMenu] = useState(true);
+
+  const hideMenuRoutes = ['/Sinopse'];
 
   return (
-    <>
-      <Menu/>
+    <BrowserRouter>
+      {showMenu && <Menu />}
       <div>
-          <BrowserRouter>
-            <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/home' element={<Home/>}/>
-              <Route path='/Quem somos' element={<Home/>}/>
-              <Route path='/Sinopse' element={<Home/>}/>
-              <Route path='/Contato' element={<Home/>}/>
-            </Routes>
-          </BrowserRouter>
+        <Routes>
+          <Route path="/"element={<Home/>}/>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/Sinopse" element={
+              <PageWrapper path="/Sinopse" setShowMenu={setShowMenu} hideMenuRoutes={hideMenuRoutes}>
+                <Home />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/Contato"
+            element={<Home />}
+          />
+        </Routes>
       </div>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+function PageWrapper({ path, setShowMenu, hideMenuRoutes, children }) {
+  const location = useLocation();
+
+  const shouldHideMenu = hideMenuRoutes.includes(path);
+
+  useState(() => {
+    setShowMenu(!shouldHideMenu);
+  }, [location.pathname]);
+
+  return children;
+}
+
+export default App;

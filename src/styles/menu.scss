@@ -1,0 +1,18 @@
+@import '/src/styles/_custom-variables.scss';
+@import 'bootstrap';
+
+
+.lastfall-brand {
+    cursor: pointer;
+    fill: black;
+    transition: 1s;
+}
+
+.lastfall-brand {
+    transition: 1s;
+  
+    &:hover {
+      fill: $primary;
+    }
+  }
+  
