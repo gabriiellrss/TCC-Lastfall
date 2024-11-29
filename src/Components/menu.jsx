@@ -6,7 +6,6 @@ import gsap from 'gsap';
 
 export default function Menu() {
 
-  const fundo = document.querySelector('#fundo');
 
   useEffect(() => {
 
@@ -27,18 +26,27 @@ export default function Menu() {
 
       const tl = gsap.timeline();
 
-      tl.to("#logo", {
-        scale: 100,
-        duration: 1,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: "#logo", 
-          start: "top bottom", 
-          end: "bottom top", 
-          scrub: true, 
-          markers: false,
-        },
+      tl.to(brand, {
+        scale: 1.5,         
+        duration: 0.5,     
+        ease: "power2.out", 
+        fill: 'rgb(57, 181, 74)'
       })
+
+      .to(brand, {
+        duration: 0.1,      
+        ease: "power2.in",
+        fill: 'rgb(57, 181, 74)'
+
+      })
+      .to(brand, {
+        opacity: 0,   
+        duration: 0.2,    
+        ease: "power1.out" ,
+        fill: 'rgb(57, 181, 74)'
+
+      })
+
       .to(brandBack, {
         scale: 200,
         duration: 0.5,
@@ -49,21 +57,18 @@ export default function Menu() {
         opacity: 1,
         duration: 1,
         ease: 'power1.out'
-      }, "+=5");
+      }, "+=5")
       
-
-
-
-
-
-
+      setInterval(function() {
+        window.location.href = "/lastfall";
+    }, 3000);
     });
 
   }, [])
 
 
   return (
-    <header className="position-fixed w-100">
+    <header id='menu' className="position-fixed w-100">
 
       <nav
         className="navbar navbar-expand-lg custom-navbar"

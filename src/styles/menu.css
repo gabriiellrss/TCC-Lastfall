@@ -1,6 +1,8 @@
-#navbar-brand { 
+
+#menu{
+  #navbar-brand { 
     transition: 1s;
-}
+  }
 
 @keyframes grow {
     from {
@@ -93,7 +95,7 @@ li {
 }
 
 .nav-link:hover {
-  color: #f0a500;
+  color: #00f064;
 }
 
 .logo {
@@ -126,3 +128,4 @@ li {
   padding: 8px 0;
 }
 
+}

@@ -3,7 +3,7 @@
     src: url(/src/assets/fonts/breakaway.ttf) format('truetype');
 }
 
-h1 {
+.font-custom {
     font-family: primary;
 }
 

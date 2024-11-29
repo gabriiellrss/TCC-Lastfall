@@ -1,47 +1,39 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import "/src/App.scss";
 import Home from './pages/home.jsx';
-import Menu from './Components/menu';
+import PageLastfall from './pages/lastfall.jsx';
+import Menu from './Components/menu.jsx';
+import DevProgress from './pages/desen.jsx';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(true);
 
-  const hideMenuRoutes = ['/Sinopse'];
+  const Layout = ({ children }) => {
+    const location = useLocation();
+    const hideMenu = location.pathname === "/lastfall" ;
+
+    return (
+      <>
+        {!hideMenu && <Menu />}
+        {children}
+      </>
+    );
+  };
 
   return (
     <BrowserRouter>
-      {showMenu && <Menu />}
-      <div>
-        <Routes>
-          <Route path="/"element={<Home/>}/>
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/Sinopse" element={
-              <PageWrapper path="/Sinopse" setShowMenu={setShowMenu} hideMenuRoutes={hideMenuRoutes}>
-                <Home />
-              </PageWrapper>
-            }
-          />
-          <Route
-            path="/Contato"
-            element={<Home />}
-          />
-        </Routes>
-      </div>
+      <Layout>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/home" element={<Home/>} />
+            <Route path="/lastfall" element={<PageLastfall />} />
+            <Route path="/lastfall/desenvolvimento" element={<DevProgress/>} />
+            <Route path="/Contato" element={<Home />} />
+          </Routes>
+        </div>
+      </Layout>
     </BrowserRouter>
   );
-}
-
-function PageWrapper({ path, setShowMenu, hideMenuRoutes, children }) {
-  const location = useLocation();
-
-  const shouldHideMenu = hideMenuRoutes.includes(path);
-
-  useState(() => {
-    setShowMenu(!shouldHideMenu);
-  }, [location.pathname]);
-
-  return children;
 }
 
 export default App;

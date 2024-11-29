@@ -2,51 +2,78 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VideoComponent from "../Components/video";
-import Esp from "../Components/est";
+import MenuLastfall from "../Components/menu-lastfall";
+import Est2 from "../Components/est2";
+import Lastfall from "../Components/est3";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function PageLastfall() {
-  useEffect(() => {
-    gsap.to("#logo", {
-      scale: 2,
-      opacity: 0, 
-      scrollTrigger: {
-        trigger: "#logo", 
-        start: "top center", 
-        end: "bottom top", 
-        
-        scrub: true, 
-        markers: false,
-      },
-    });
+  
+    useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
 
+      const tl = gsap.timeline();
 
-  }, []);
+      tl.to('#section1', {
+        duration: 0.5,
+        opacity: 0,
+        ease: "power2.out",
+        onComplete: () => {
+          gsap.to('#section1', {
+            duration: 1,
+            opacity: 1,
+            scale: 1,
+            ease: "power2.inOut",
+          });
+        }
+      })
+  
+      .to('#logo', {
+        duration: 0.5,
+        scale: 30,
+        opacity: 0,
+        ease: "power2.out",
+        onComplete: () => {
+          gsap.to('#logo', {
+            duration: 1,
+            opacity: 1,
+            scale: 1,
+            ease: "power2.inOut",
+          });
+        }
+      });
+    }, []);
 
   return (
+    <>    
+    <MenuLastfall active={true}/>
+    
     <div className="bg-black">
       <section
+      id="section1"
         style={{
           position: "relative",
           width: "100%",
           height: "100vh",
           overflow: "hidden",
+          paddingTop:"100px"
         }}
-      >
+      >   
+
+        <div className="pt-5" >
         <img
-          id="fundo"
+          id="video"
+
           src="/src/assets/fundo.png"
           alt="Imagem de fundo"
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
+
             width: "100%",
-            height: "100%",
             objectFit: "cover",
           }}
         />
+          
+        </div>
 
         <img
           id="logo"
@@ -57,81 +84,20 @@ export default function PageLastfall() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)", 
-            width: "50%",
+            width: "70%",
             height: "auto",
+            zIndex: 5,
             transformOrigin: "center center", 
           }}
         />
       </section>
 
-      <section id="teste" className="bg-black w-100">
-        <div className="container mt-5 text-lg-center">
-          <h1 className="text-primary" style={{fontSize: '50px'}}>Mais que um Jogo!</h1>
-        </div>
-        
-        <div className="m-3 d-flex justify-content-between " >
-          <div style={{maxWidth:'60%'}}>
-            <img src="/src/assets/imgs/personagem.png" className="img-fluid w-100" alt="..."
-                    style={{
-                      objectFit: 'cover',
-                      width: '100%',
-                      height: '100%',
-                      WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 30%)',
-                      maskImage: 'linear-gradient(to top, transparent 0%, black 30%) ' ,
-                      WebkitMaskComposite: 'destination-in',
-                      maskComposite: 'intersect',
-                    }}/>
-          </div>
-          <div className="d-flex justify-content-center align-items-center ">
-              <h1 className="text-center text-primary">Helton o Maior vilao de todos os tempos!</h1>
-          </div>
-        </div>
-      </section>
 
-      
-      <VideoComponent/>
-      
-      <section className="bg-black container d-flex gap-3">
-      <div className="card" style={{width: '18rem'}}>
-        <img src="./src/assets/citygreen.png" className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
 
-      <div className="card" style={{width: '18rem'}}>
-        <img src="./src/assets/citygreen.png" className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+      <Est2/>
 
-      <div className="card" style={{width: '18rem'}}>
-        <img src="./src/assets/citygreen.png" className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-
-      <div className="card" style={{width: '18rem'}}>
-        <img src="./src/assets/citygreen.png" className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    
-      </section>
-
-      <Esp/>
-      
+      <Lastfall/>
+                  
       <div id="faleconosco" className=" d-flex justify-content-center ">
         <h1 style={{fontSize:'50px'}}>Fale conosco</h1>
       </div>
@@ -144,16 +110,14 @@ export default function PageLastfall() {
     </div>
 
     
-    <footer className="bg-body-tertiary text-center text-lg-start mt-3">
-        <div className="text-center p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
-        © 2024 Copyright: Lastfall
-        <p className="text-body" > Davi de Sousa, Felipe Duarte, Gabriel Rodrigo, Luiz Mateus e Miguel Antonio</p>
-        </div>
-    </footer>
-
-
-
-
+      <footer className="bg-body-tertiary text-center text-lg-start mt-3">
+          <div className="text-center p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.05)'}}>
+          © 2024 Copyright: Lastfall
+          <p className="text-body" > Davi de Sousa, Felipe Duarte, Gabriel Rodrigo, Luiz Mateus e Miguel Antonio</p>
+          </div>
+      </footer>
     </div>
+    </>
+
   );
 }

@@ -1,0 +1,72 @@
+
+
+.navbar-lastfall-active{
+    opacity: 1 !important;
+
+
+}
+
+#video{
+  object-fit: cover;
+
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to bottom, transparent 0%, black 30%);
+  mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to bottom, transparent 0%, black 30%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
+.gradiant{
+  object-fit: cover;
+
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to top, transparent 0%, black 30%);
+  mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to top, transparent 0%, black 30%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
+.img-hover {
+  filter: grayscale(100%);
+  transition: filter 1s, background 1s, transform 1s;
+  transform: scale(1);
+  background: transparent;
+}
+
+.img-hover:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05); 
+  background: radial-gradient(circle, rgba(0,13,107,1) 5%, rgba(2,0,36,1) 90%);
+}
+
+.img-jeff-hover{
+  filter: grayscale(100%);
+  transition: filter 1s, background 1s, transform 1s;
+  transform: scale(1);
+  background: transparent;
+}
+
+.img-jeff-hover:hover{
+  filter: grayscale(0%);
+  transform: scale(1.05); 
+  background: radial-gradient(circle, rgba(0,107,20,1) 5%, rgb(0, 24, 15) 90%);
+}
+
+.img-kleber-hover {
+  filter: grayscale(100%);
+  transition: filter 1s, background 1s, transform 1s;
+  transform: scale(1);
+  background: transparent;
+
+}
+
+.img-kleber-hover:hover {
+    filter: grayscale(0%);
+  transform: scale(1.05); 
+  background: radial-gradient(circle, rgb(0, 73, 107) 5%, rgb(0, 24, 15) 90%);
+  
+}
