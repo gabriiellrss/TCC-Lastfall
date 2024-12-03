@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react";
 import '/src/styles/menu-lastfall.scss';
 
-export default function MenuLastfall(active) {
-  const navBarRef = useRef(null); 
+export default function MenuLastfall({active}) {
+  const navBarRef = useRef(null);
+
 
   useEffect(() => {
 
-    if(active === true){
+    if(active == true) {
+
       const handleScroll = () => {
         if (window.scrollY > 1000) {
           navBarRef.current.classList.add('navbar-lastfall-active');
@@ -14,18 +16,21 @@ export default function MenuLastfall(active) {
           navBarRef.current.classList.remove('navbar-lastfall-active');
         }
       }
-  
       window.addEventListener('scroll', handleScroll);
+    
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-     
     } else {
       navBarRef.current.classList.add('navbar-lastfall-active');
-    }
 
-  }, []); 
+    }
+     
+
+
+  }, []);
+  
 
   return (
     <header
@@ -48,17 +53,42 @@ export default function MenuLastfall(active) {
         }}
       >
         <ul className="nav">
+          <li>
+            <a className='nav-item nav-link text-white ' href="/">Home</a>
+          </li>
+
         <li className="nav-item dropdown">
           <a className="nav-item nav-link text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Home
+            Game
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="/">GabStudios</a></li>
-            <li><a className="dropdown-item" href="/lastfall">Lastfall</a></li>
+            <li><a className="dropdown-item" href="/lastfall#">Lastfall</a></li>
+            <li><a className="dropdown-item" href="/lastfall#sobreojogo">Sobre o Jogo</a></li>
+            <li><a className="dropdown-item" href="/lastfall#quemsomos">Quem Somos</a></li>
+            <li><a className="dropdown-item" href="/lastfall#sinopse">Sinopse</a></li>
+            <li><a className="dropdown-item" href="/lastfall#caracteristicas">Caracteristicas</a></li>
+            <li><a className="dropdown-item" href="/lastfall#persons">Personagens</a></li>
+            <li><a className="dropdown-item" href="/lastfall#trailer">Trailer</a></li>
+            <li><a className="dropdown-item" href="/lastfall#jogabilidade">Jogabilidade</a></li>
+            <li><a className="dropdown-item" href="/lastfall#historia">Historia</a></li>
+            <li><a className="dropdown-item" href="/lastfall#fale">Fale Conosco</a></li>
+
+
+
+
+
           </ul>
         </li>
-          <li><a className='nav-item nav-link text-white' href="/lastfall/desenvolvimento">Desevolvimento</a></li>
-          <li><a className='nav-item nav-link text-white' href="">Download</a></li>
+
+
+
+          <li>
+            <a className='nav-item nav-link text-white' href="/lastfall/desenvolvimento">Desevolvimento</a>
+          </li>
+
+          <li>
+            <a className='nav-item nav-link text-white' href="">Download</a>
+          </li>
         </ul>
       </nav>
     </header>

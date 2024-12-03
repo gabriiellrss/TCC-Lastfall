@@ -4,16 +4,27 @@ import Home from './pages/home.jsx';
 import PageLastfall from './pages/lastfall.jsx';
 import Menu from './Components/menu.jsx';
 import DevProgress from './pages/desen.jsx';
+import Erro468 from './Components/erro468.jsx';
+import MenuLastfall from './Components/menu-lastfall.jsx';
+import { useEffect } from 'react';
 
 function App() {
 
   const Layout = ({ children }) => {
     const location = useLocation();
-    const hideMenu = location.pathname === "/lastfall" ;
+    const atual = "/lastfall"
+    var i = true
+    const hideMenu = location.pathname === "/lastfall" || location.pathname === "/lastfall/desenvolvimento";
+
+      if(atual === location.pathname) {
+        i = true
+      } else {
+        i = false
+      }
 
     return (
       <>
-        {!hideMenu && <Menu />}
+        {hideMenu == true ? <MenuLastfall active={i}/> : <Menu/> }
         {children}
       </>
     );
@@ -29,6 +40,7 @@ function App() {
             <Route path="/lastfall" element={<PageLastfall />} />
             <Route path="/lastfall/desenvolvimento" element={<DevProgress/>} />
             <Route path="/Contato" element={<Home />} />
+            <Route path="*" element={<Erro468/>} />
           </Routes>
         </div>
       </Layout>
