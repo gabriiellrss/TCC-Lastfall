@@ -95,10 +95,8 @@ function DevProgress() {
 
   return (
     <div> 
-        <MenuLastfall active={false}/>
 
-
-      <Container id="intro" className="pt-5" ref={introRef}>
+      <Container id="intro" style={{paddingTop: "5rem"}} ref={introRef}>
         <Row>
           <Col>
             <h1>Desenvolvimento do Jogo: Lastfall</h1>
@@ -128,7 +126,7 @@ function DevProgress() {
         </Row>
       </Container>
 
-      <Container id="team" className="my-5" ref={teamRef}>
+      {/*<Container id="team" className="my-5" ref={teamRef}>
         <Row>
           <Col>
             <h2>A Equipe de Desenvolvimento</h2>
@@ -178,7 +176,7 @@ function DevProgress() {
         </Row>
         <Row>
           <Col md={4}>
-            <Image src="https://via.placeholder.com/500x300" thumbnail />
+            <Image src="/images/image.jpeg" thumbnail style={{overflow: 'hidden', objectFit: 'cover', aspectRatio: '16/9' }}/>
           </Col>
           <Col md={4}>
             <Image src="https://via.placeholder.com/500x300" thumbnail />
@@ -187,7 +185,7 @@ function DevProgress() {
             <Image src="https://via.placeholder.com/500x300" thumbnail />
           </Col>
         </Row>
-      </Container>
+      </Container>*/}
 
       <Container id="next-steps" className="my-5" ref={nextStepsRef}>
         <Row>
@@ -202,9 +200,11 @@ function DevProgress() {
               </ul>
               Estamos animados com o futuro do projeto e mal podemos esperar para compartilhar mais com todos!
             </p>
+            {/*
             <Button variant="primary" href="/subscribe">
               Assine para Atualizações
             </Button>
+            */}
           </Col>
         </Row>
       </Container>

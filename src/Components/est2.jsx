@@ -88,7 +88,7 @@ function Est2() {
         className="py-5"
         ref={(el) => (sectionsRefs.current[1] = el)}
       >
-        <Container>
+        <Container id="sobreojogo">
           <Row>
             <Col md={6}>
               <h2>Sobre o Jogo</h2>
@@ -148,7 +148,7 @@ function Est2() {
         className="py-5"
         ref={(el) => (sectionsRefs.current[1] = el)}
       >
-        <Container>
+        <Container id="sinopse">
           <Row>
 
             <Col md={6}>
@@ -177,7 +177,7 @@ function Est2() {
         ref={(el) => (sectionsRefs.current[2] = el)}
       >
         <h1 className="text-center pb-3">Caracteristicas</h1>
-            <Container className="d-flex gap-3 justify-content-center">
+            <Container id="caracteristicas" className="d-flex gap-3 justify-content-center">
               <div className="card" style={{width: '18rem'}}>
                 <img src="./src/assets/citygreen.png" className="card-img-top" />
                 <div className="card-body">
@@ -222,7 +222,7 @@ function Est2() {
         className="py-5"
         ref={(el) => (sectionsRefs.current[3] = el)}
       >
-        <Container>
+        <Container id="persons">
           <Row>
             <Col md={6}>
               <img

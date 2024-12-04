@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+<<<<<<< HEAD
 import MenuLastfall from "../Components/menu-lastfall";
+=======
+import VideoComponent from "../Components/video";
+>>>>>>> 5a118e8193b8cc074c42f0b1626d1ceedec58360
 import Est2 from "../Components/est2";
 import Lastfall from "../Components/est3";
 
@@ -43,9 +47,8 @@ export default function PageLastfall() {
       });
     }, []);
 
-  return (
-    <>    
-    <MenuLastfall active={true}/>
+  return ( 
+    
     
     <div className="bg-black">
       <section
@@ -116,7 +119,6 @@ export default function PageLastfall() {
           </div>
       </footer>
     </div>
-    </>
 
   );
 }
