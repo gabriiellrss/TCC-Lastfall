@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import VideoComponent from "../Components/video";
 import MenuLastfall from "../Components/menu-lastfall";
 import Est2 from "../Components/est2";
 import Lastfall from "../Components/est3";
