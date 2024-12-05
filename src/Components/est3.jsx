@@ -211,18 +211,20 @@ function Lastfall() {
         </Row>
       </Container>
 
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Pronto para jogar?</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>Prepare-se para uma aventura épica em *Lastfall*. Em breve, disponível para todas as plataformas.</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" href="/download">Baixar agora</Button>
-          <Button variant="primary" href="/trailer">Assista ao Trailer</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
+      <Container>
+        <Modal.Dialog>
+          <Modal.Header closeButton>
+            <Modal.Title>Pronto para jogar?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Prepare-se para uma aventura épica em *Lastfall*. Em breve, disponível para todas as plataformas.</p>
+          </Modal.Body>
+          <Modal.Footer className="gap-3">
+            <Button variant="secondary" href="/download">Baixar agora</Button>
+            <Button variant="primary" href="/trailer">Assista ao Trailer</Button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      </Container>
     </>
   );
 }

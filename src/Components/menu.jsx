@@ -49,7 +49,7 @@ export default function Menu() {
 
       .to(brandBack, {
         scale: 200,
-        duration: 0.5,
+        duration: 0.2,
         backgroundColor: 'black',
         ease: 'power1.out',
       })
@@ -61,7 +61,7 @@ export default function Menu() {
       
       setInterval(function() {
         window.location.href = "/lastfall";
-    }, 3000);
+    }, 2500);
     });
 
   }, [])

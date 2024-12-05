@@ -1,11 +1,6 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-<<<<<<< HEAD
-import MenuLastfall from "../Components/menu-lastfall";
-=======
-import VideoComponent from "../Components/video";
->>>>>>> 5a118e8193b8cc074c42f0b1626d1ceedec58360
 import Est2 from "../Components/est2";
 import Lastfall from "../Components/est3";
 
@@ -18,11 +13,13 @@ export default function PageLastfall() {
       const tl = gsap.timeline();
 
       tl.to('#section1', {
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
-        ease: "power2.out",
+        visibility: 'hidden',
+        ease: "power2.inOut",
         onComplete: () => {
           gsap.to('#section1', {
+            visibility: 'visible',
             duration: 1,
             opacity: 1,
             scale: 1,
@@ -32,7 +29,7 @@ export default function PageLastfall() {
       })
   
       .to('#logo', {
-        duration: 0.5,
+        duration: 0.3,
         scale: 30,
         opacity: 0,
         ease: "power2.out",
