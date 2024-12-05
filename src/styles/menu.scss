@@ -16,3 +16,20 @@
     }
   }
   
+  p::-webkit-scrollbar {
+    width: 5px;              
+  }
+  
+  p::-webkit-scrollbar-track {
+    background: rgba(255, 166, 0, 0);       
+  }
+  
+  p::-webkit-scrollbar-thumb {
+    background-color: $primary;  
+    border-radius: 40px;      
+    border: 3px solid rgba(255, 166, 0, 0); 
+  }
+
+
+  
+  

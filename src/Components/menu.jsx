@@ -114,12 +114,12 @@ export default function Menu() {
                 <ul className="dropdown-menu custom-dropdown">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Empresa
+                      GabStudios
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Sala de Imprensa da Epic
+                      Last
                     </a>
                   </li>
                   <li>

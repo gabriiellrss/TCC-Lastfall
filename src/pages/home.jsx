@@ -1,13 +1,10 @@
+import Carousel from "../Components/carousel";
 
 
 export default function Home() {
     return(
         <div>
-            <img src="/src/assets/fundo2.png" className='img-fluid' alt="" />
-            <img src="/src/assets/fundo2.png" className='img-fluid' alt="" />
-
-            <img src="/src/assets/fundo2.png" className='img-fluid' alt="" />
-            <img src="/src/assets/fundo2.png" className='img-fluid' alt="" />
+            <Carousel/>
 
         </div>
     )

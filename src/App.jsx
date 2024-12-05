@@ -7,6 +7,7 @@ import DevProgress from './pages/desen.jsx';
 import Erro468 from './Components/erro468.jsx';
 import MenuLastfall from './Components/menu-lastfall.jsx';
 import { useEffect } from 'react';
+import Footer from './Components/footer.jsx';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
             <Route path="*" element={<Erro468/>} />
           </Routes>
         </div>
+        <Footer/>
       </Layout>
     </BrowserRouter>
   );

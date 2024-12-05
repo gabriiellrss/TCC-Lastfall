@@ -100,11 +100,13 @@ function Lastfall() {
       <Container id="intro" className="my-5" ref={introRef}>
         <Row className="text-center">
           <Col>
-            <h1>Lastfall</h1>
-            <p>
-              Em um futuro pós-apocalíptico, a Terra foi devastada por um cataclismo global. A humanidade luta pela
-              sobrevivência enquanto as cidades caem em ruínas. Você, o último herói de uma civilização esquecida,
-              terá de enfrentar perigos inomináveis para restaurar a esperança.
+            <h1>LASTFALL</h1>
+            <p className="text-center ">
+              Em um futuro pós-apocalíptico, a Terra foi devastada por um cataclismo global que deixou o planeta em ruínas. A humanidade luta desesperadamente para sobreviver, enquanto as grandes metrópoles se desmoronam e a civilização tal como a conhecemos é apenas uma lembrança distante. Neste cenário desolador, você assume o controle de Cleber, um personagem cuja vida é marcada por segredos e conspirações.
+
+Cleber se encontra em um mundo onde as verdades estão enterradas sob camadas de tramas e escândalos, onde a linha entre o bem e o mal é constantemente questionada. Sua missão é ajudar a reduzir os impactos catastróficos que ainda assolam a Terra, sabendo que não pode mudar o que já aconteceu. Com coragem e determinação, Cleber deve navegar por este terreno perigoso, enfrentando desafios imensos e tomando decisões que poderão selar o destino da humanidade.
+
+Será Cleber capaz de desvendar os segredos que moldaram sua existência e encontrar um caminho para aliviar o sofrimento de um mundo devastado? A responsabilidade de moldar um futuro menos sombrio recai sobre seus ombros, enquanto ele tenta remediar as feridas de um planeta à beira do colapso.
             </p>
             <Button variant="primary" size="lg" href="#gameplay">
               Explore o Mundo
@@ -113,12 +115,12 @@ function Lastfall() {
         </Row>
       </Container>
 
-      <Container id="gameplay" className="my-5" ref={gameplayRef}>
+      <Container id="gameplay" className="py-5" ref={gameplayRef}>
         <Row>
           <Col md={6}>
             <h2>Jogabilidade</h2>
             <p>
-              Em *Lastfall*, você irá explorar vastos ambientes destruídos, enfrentando criaturas mutantes e
+              Em <a href=""className="font-custom">Lastfall</a>, você irá explorar vastos ambientes destruídos, enfrentando criaturas mutantes e
               facções hostis. A jogabilidade mistura combate intenso, exploração e resolução de puzzles, com a
               possibilidade de personalizar sua personagem.
             </p>
@@ -136,9 +138,9 @@ function Lastfall() {
       <Container id="story" className="my-5" ref={storyRef}>
         <Row>
           <Col>
-            <h2>A História</h2>
-            <p>
-              *Lastfall* conta a história de um mundo destruído por um cataclismo global. Como o último sobrevivente
+            <h2 className="text-center">A História</h2>
+            <p className="text-center">
+            <a href=""className="font-custom">Lastfall</a> conta a história de um mundo destruído por um cataclismo global. Como o último sobrevivente
               da ordem antiga, você será chamado a desvendar os mistérios do fim do mundo. Em uma jornada cheia de
               escolhas difíceis e personagens inesquecíveis, você terá de decidir o destino da Terra.
             </p>
@@ -158,7 +160,7 @@ function Lastfall() {
               <Card.Body>
                 <Card.Title>O Último Herói</Card.Title>
                 <Card.Text>
-                  O protagonista, um herói com um passado sombrio, que busca redenção ao enfrentar os horrores do novo mundo.
+                Cleber, o protagonista, possui um passado perturbador e sombrio. Enquanto avança pelo jogo, ele luta contra seus demônios internos e tenta corrigir os erros do passado. Sua jornada é uma busca por redenção em meio a desafios morais e decisões difíceis. Ao enfrentar inimigos e revelações, Cleber tem a oportunidade de encontrar a paz interior e se tornar uma força do bem em um mundo devastado. A grande questão é: será que ele conseguirá se redimir e fazer a diferença?
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -188,7 +190,7 @@ function Lastfall() {
               <Card.Body>
                 <Card.Title>O Vilão Impiedoso</Card.Title>
                 <Card.Text>
-                  O líder de uma facção militarizada, determinado a reconstruir o mundo com mãos de ferro.
+                Helton, um vilão determinado a alcançar seus objetivos a qualquer custo, está obcecado em encontrar curas para diversas doenças. Mas quais são suas verdadeiras motivações? Será que ele realmente deseja ajudar a humanidade, está em busca de riqueza ou procura desesperadamente uma cura para salvar alguém próximo? Independente do motivo, suas ações e métodos questionáveis levantam a dúvida: será que esses motivos justificam os atos maléficos que ele cometeu e continua a cometer?
                 </Card.Text>
               </Card.Body>
             </Card>

@@ -1,0 +1,21 @@
+footer {
+    font-size: 14px;
+  }
+  
+  footer h5 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #ccc;
+  }
+  

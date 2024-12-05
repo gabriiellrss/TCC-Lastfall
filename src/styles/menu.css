@@ -95,7 +95,7 @@ li {
 }
 
 .nav-link:hover {
-  color: #00f064;
+  color: #03dd70;
 }
 
 .logo {
@@ -115,6 +115,8 @@ li {
   -webkit-backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 10px 15px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin: 5px 0;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
   color: white;
@@ -122,10 +124,13 @@ li {
 }
 
 .custom-dropdown a {
+  width: 100%;
   color: white;
   text-decoration: none;
   display: block;
-  padding: 8px 0;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 }

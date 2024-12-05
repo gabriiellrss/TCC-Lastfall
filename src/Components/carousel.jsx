@@ -1,34 +1,41 @@
-
-export default function Carousel(){
-    return(
-        <div id="carouselExample" class="carousel slide">
-            
-            <div class="carousel-inner">
-              <div class="carousel-item ">
-                <img  src="src\assets\imgs\web-img-14.jpg" className="d-block w-100" alt="..."/>
-              </div>
-
-              <div class="carousel-item active">
-                <img src="src\assets\imgs\web-img-14.jpg" className="d-block w-100" alt="..."/>
-              </div>
-
-              <div class="carousel-item">
-                <img src="src\assets\imgs\web-img-14.jpg" classname="d-block w-100" alt="..."/>
-              </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+import React from "react";
+import "/src/styles/carousel.css";
 
 
+const slides = [
+  {
+    image: "https://via.placeholder.com/800x400?text=Unreal+Engine",
+    text: "UNREAL ENGINE",
+  },
+  {
+    image: "https://via.placeholder.com/800x400?text=Fortnite",
+    text: "FORTNITE",
+  },
+  {
+    image: "https://via.placeholder.com/800x400?text=Rocket+League",
+    text: "ROCKET LEAGUE",
+  },
+  {
+    image: "https://via.placeholder.com/800x400?text=Store",
+    text: "STORE",
+  },
+];
 
-        </div>
-    )
-}
+const Carousel = () => {
+  return (
+    <div className="carousel">
+      <div className="carousel-track">
+        {/* Duplica as imagens para efeito contínuo */}
+        {slides.concat(slides).map((slide, index) => (
+          <div className="carousel-slide" key={index}>
+            <img src={slide.image} alt={slide.text} />
+            <div className="carousel-text">{slide.text}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Carousel;
+

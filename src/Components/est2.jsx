@@ -28,13 +28,13 @@ function Est2() {
         }
       );
     });
-  
+
     gsap.utils.toArray(".parallax").forEach((element) => {
       gsap.fromTo(
         element,
-        { y: 100, opacity: 0.5 },
+        { y: 5, opacity: 0.5 },
         {
-          y: -100,
+          y: -5,
           opacity: 1,
           ease: "power1.out",
           scrollTrigger: {
@@ -45,7 +45,7 @@ function Est2() {
         }
       );
     });
-  
+
     gsap.fromTo(
       ".card",
       { opacity: 0, scale: 0.8, y: 50 },
@@ -64,7 +64,7 @@ function Est2() {
       }
     );
   }, []);
-  
+
 
   return (
     <>
@@ -82,20 +82,18 @@ function Est2() {
         </Container>
       </div>
 
-    
+
       <section
         id="about"
         className="py-5"
         ref={(el) => (sectionsRefs.current[1] = el)}
       >
-        <Container id="sobreojogo">
+        <Container>
           <Row>
             <Col md={6}>
               <h2>Sobre o Jogo</h2>
               <p>
-                <a href="" className="font-custom">Lastfall</a> é um RPG de ação ambientado em um mundo vasto e
-                repleto de mistérios. Explore masmorras, derrote inimigos
-                poderosos e descubra a história épica por trás desse universo.
+                <a href="" className="font-custom">Lastfall</a> Embarque em uma jornada assombrosa neste RPG de ação, ambientado em um mundo vasto e sombrio, onde o desconhecido espreita a cada esquina. Adentre um laboratório destruído, explore uma cidade desolada e enfrente inimigos terríveis enquanto desvende os segredos sombrios que moldam esse universo macabro. A cada passo, descubra os mistérios ocultos de uma corporação sinistra e suas ações nefastas, enquanto segue o rastro das intenções sombrias de Helton. No clímax, a verdade se revelará dentro da empresa onde tudo começou. Será você capaz de enfrentar o terror e emergir com a verdade?
               </p>
             </Col>
             <Col md={6}>
@@ -112,7 +110,7 @@ function Est2() {
       <section
         id="about"
         className="py-5"
-        ref={(el) => (sectionsRefs.current[1] = el)}
+        ref={(el) => (sectionsRefs.current[2] = el)}
       >
         <Container id="quemsomos" className="my-5" >
             <Row>
@@ -141,17 +139,15 @@ function Est2() {
         </Container>
       </section>
 
-
-
       <section
         id="about"
         className="py-5"
-        ref={(el) => (sectionsRefs.current[1] = el)}
+        ref={(el) => (sectionsRefs.current[3] = el)}
       >
-        <Container id="sinopse">
+        <Container>
           <Row>
 
-            <Col md={6}>
+            <Col md={6} >
               <img
                 src="https://via.placeholder.com/500x300"
                 alt="Imagem do jogo"
@@ -159,12 +155,14 @@ function Est2() {
               />
             </Col>
 
-            <Col md={6}>
+            <Col md={6} className="overflow-hidden">
               <h2 >Sinopse</h2>
-              <p>
-                <a href="" className="font-custom">Lastfall</a> é um RPG de ação ambientado em um mundo vasto e
-                repleto de mistérios. Explore masmorras, derrote inimigos
-                poderosos e descubra a história épica por trás desse universo.
+              <p className="overflow-y-scroll pe-3" style={{height: "20rem"}}>
+                <a href="" className="font-custom">Lastfall</a> se passa em 2100 em um mundo destopico onde por causa dos impactos dao aquecimento global o planeta se tornou difente, ele fcou mais quente e seu ar não é mas o mesmo, com isso aumentou as pessoas que sofrem de doenças relacionadas com o ar, vendo isso uma empresa que se chama Umbrella corps foi criado por helton para forncecer medicamentos com preços mais baratos e equipamentos tecnologicos mais baratos para hospitais para ajudar a população, mas atrás dos panos a empresa é totalmente diferente, mas para conseguir fazer esse medicamentos a empresa aposta em pesquisar geleiras para assim pegar bacterias antigas e fazer medicamentos mas baratos e melhores com isso cleber e mais 49 cientistas foram até o polo sul para pesquisar novas bacterias para desenvolver mais medicamentos, contratos pela Umbrella, mas quando cleber tinha achado uma nova especie de bacteria uma das gelerias se deslocaram e um pedaço acabou caindo em cima dele e depois ele acorda em um laboratório destruido e começa sua jornda para sair de lá e descobir como ele foi parar lá e ele percebe que não é mais o mesmo. reescreva isso mas não mude muita coisa
+                  Lastfall se passa em 2100 em um mundo distópico onde, devido aos impactos do aquecimento global, o planeta se transformou drasticamente. A temperatura aumentou, e a qualidade do ar se deteriorou, resultando em um crescimento alarmante de doenças respiratórias. Em resposta, a empresa Umbrella Corps foi criada por Helton para fornecer medicamentos e equipamentos tecnológicos a preços acessíveis para hospitais, ajudando a população. No entanto, por trás dessa fachada benevolente, a empresa tem intenções sombrias.
+                  Para produzir esses medicamentos, a Umbrella Corps aposta em pesquisas nas geleiras para extrair bactérias antigas que possam ser usadas para criar medicamentos mais eficazes e baratos. Cleber, junto com outros 49 cientistas, foi enviado ao Polo Sul para coletar essas bactérias, sob contrato da Umbrella.
+                  Durante a expedição, Cleber descobriu uma nova espécie de bactéria. Porém, um deslocamento de gelo fez com que um pedaço caísse sobre ele. Quando Cleber acorda, encontra-se em um laboratório destruído. Ele começa sua jornada para escapar, desvendando como foi parar ali e descobrindo que algo dentro dele mudou.
+
               </p>
             </Col>
           </Row>
@@ -174,10 +172,10 @@ function Est2() {
       <section
         id="features"
         className="bg-black py-5 "
-        ref={(el) => (sectionsRefs.current[2] = el)}
+        ref={(el) => (sectionsRefs.current[4] = el)}
       >
         <h1 className="text-center pb-3">Caracteristicas</h1>
-            <Container id="caracteristicas" className="d-flex gap-3 justify-content-center">
+            <Container className="d-flex gap-3 justify-content-center">
               <div className="card" style={{width: '18rem'}}>
                 <img src="./src/assets/citygreen.png" className="card-img-top" />
                 <div className="card-body">
@@ -216,13 +214,16 @@ function Est2() {
             </Container>
 
       </section>
-        
+
       <section
         id="characters"
         className="py-5"
-        ref={(el) => (sectionsRefs.current[3] = el)}
+        ref={(el) => (sectionsRefs.current[5] = el)}
       >
-        <Container id="persons">
+        <Container className="py-4 text-center">
+          <h2 className="text-white fs-1">Personangens</h2>
+        </Container>
+        <Container>
           <Row>
             <Col md={6}>
               <img
@@ -236,9 +237,7 @@ function Est2() {
             <div>
               <h2>Helton</h2>
               <p>
-                <a href="" className="font-custom">Lastfall</a> é um RPG de ação ambientado em um mundo vasto e
-                repleto de mistérios. Explore masmorras, derrote inimigos
-                poderosos e descubra a história épica por trás desse universo.
+                <a href="" className="font-custom">Lastfall</a> Helton, um bilionário empresário da influente família Draven, que ganhou renome por sua grande carreira no ramo da tecnologia, agora expandiu sua empresa para o setor médico. Fundador da Umbrella Corps, ele pretende demonstrar que visa "o bem das pessoas". No entanto, Helton também tem seus próprios motivos ocultos. Será que esses motivos justificam seus erros e atos maléficos?
               </p>
               </div>
             </Col>
@@ -252,9 +251,7 @@ function Est2() {
             <div>
               <h2>Jeff</h2>
               <p>
-                <a href="" className="font-custom">Lastfall</a> é um RPG de ação ambientado em um mundo vasto e
-                repleto de mistérios. Explore masmorras, derrote inimigos
-                poderosos e descubra a história épica por trás desse universo.
+                <a href="" className="font-custom">Lastfall</a>  Jeff, mais conhecido como Jeffrey Collins, é um cientista brilhante e um dos principais braços direitos de Helton no laboratório. Ele foi um dos primeiros a iniciar o projeto de medicamentos da Umbrella Corps. No entanto, ao longo do tempo, algumas de suas atitudes mudaram, lançando uma sombra sobre seu futuro. Como será que ele está atualmente?
               </p>
               </div>
             </Col>
@@ -284,9 +281,7 @@ function Est2() {
             <div>
               <h2>Kleber</h2>
               <p>
-                <a href="" className="font-custom">Lastfall</a> é um RPG de ação ambientado em um mundo vasto e
-                repleto de mistérios. Explore masmorras, derrote inimigos
-                poderosos e descubra a história épica por trás desse universo.
+                <a href="" className="font-custom">Lastfall</a> Cleber Fernandes, um talentoso cientista ainda sem grande renome no mundo científico, estava em busca de oportunidades para melhorar sua situação financeira. Quando recebeu um convite da Umbrella para participar de uma pesquisa no Polo Sul, ele aceitou sem hesitar. No entanto, ele não poderia imaginar que essa decisão transformaria sua vida de maneira irreversível, levando-o a situações e ações que jamais pensou que teria que enfrentar.
               </p>
               </div>
             </Col>
@@ -299,7 +294,7 @@ function Est2() {
       <section
         id="trailer"
         className="py-5"
-        ref={(el) => (sectionsRefs.current[5] = el)}
+        ref={(el) => (sectionsRefs.current[6] = el)}
       >
         <Container>
           <h2 className="text-center mb-4">Trailer do Jogo</h2>

@@ -10,3 +10,7 @@
 html {
     scroll-behavior: smooth;
 }
+
+p::-webkit-scrollbar-button {
+    display: none !important; 
+  }
