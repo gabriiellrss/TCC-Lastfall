@@ -10,25 +10,23 @@ import Footer from './Components/footer.jsx';
 
 function App() {
 
+
   const Layout = ({ children }) => {
     const location = useLocation();
-    const atual = "https://www.gabstudios.shop/lastfall"
-    var i = true
-    const hideMenu = location.pathname === "https://www.gabstudios.shop/lastfall" || location.pathname === "https://www.gabstudios.shop/lastfall/desenvolvimento";
-
-      if(atual === location.pathname) {
-        i = true
-      } else {
-        i = false
-      }
-
+    const atual = "/lastfall"; 
+  
+    const hideMenu = location.pathname === atual || location.pathname === "/lastfall/desenvolvimento";
+  
+    const i = location.pathname === atual;
+  
     return (
       <>
-        {hideMenu == true ? <MenuLastfall active={i}/> : <Menu/> }
+        {hideMenu ? <MenuLastfall active={i}/> : <Menu />}
         {children}
       </>
     );
   };
+  
 
   return (
     <BrowserRouter>
