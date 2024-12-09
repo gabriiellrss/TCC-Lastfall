@@ -1,8 +1,23 @@
 import { useEffect, useRef } from "react";
 import '/src/styles/menu-lastfall.scss';
+import { useMediaQuery } from "react-responsive";
 
 export default function MenuLastfall({active}) {
-  const navBarRef = useRef(null);
+  const navBarRef = useRef();
+
+
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const menuLastfall = useRef()
+
+
+
+  useEffect(() => {
+    if(isMobile && menuLastfall.current){
+      menuLastfall.current.classList.add('menuMoblie')
+    } else {
+      menuLastfall.current.classList.remove('menuMoblie')
+    }
+  },[isMobile])
 
 
   useEffect(() => {
@@ -44,6 +59,7 @@ export default function MenuLastfall({active}) {
     >
       <nav
         id="navbar-nav"
+        ref={menuLastfall}
         className="d-flex justify-content-center align-items-center w-auto rounded-5"
         style={{
           backdropFilter: 'blur(16px)',

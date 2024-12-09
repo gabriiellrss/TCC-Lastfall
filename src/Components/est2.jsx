@@ -15,6 +15,9 @@ function Est2() {
   useEffect(() => {
     if(isMobile && homePage.current){
       homePage.current.classList.add('moblieActive')
+    } else {
+      homePage.current.classList.remove('moblieActive')
+
     }
   },[isMobile])
 

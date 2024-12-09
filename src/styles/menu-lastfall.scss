@@ -1,4 +1,10 @@
 
+.menuMoblie {
+  width: 75%;
+  a {
+    font-size: 80% !important;
+  }
+}
 
 .navbar-lastfall-active{
     opacity: 1 !important;
@@ -32,6 +38,19 @@
 
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
+}
+
+.moblieBack {
+    object-fit: cover;
+
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to top, transparent 0%, black 30%);
+  mask-image: linear-gradient(to top, transparent 0%, black 30%) 
+  , linear-gradient(to top, transparent 0%, black 30%);
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+
 }
 
 .img-hover {

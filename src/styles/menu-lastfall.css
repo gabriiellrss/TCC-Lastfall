@@ -1,3 +1,10 @@
+.menuMoblie {
+  width: 75%;
+}
+.menuMoblie a {
+  font-size: 80% !important;
+}
+
 .navbar-lastfall-active {
   opacity: 1 !important;
 }
@@ -16,6 +23,15 @@
 }
 
 .gradiant {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%), linear-gradient(to top, transparent 0%, black 30%);
+  mask-image: linear-gradient(to top, transparent 0%, black 30%), linear-gradient(to top, transparent 0%, black 30%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
+.moblieBack {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%), linear-gradient(to top, transparent 0%, black 30%);
@@ -61,4 +77,4 @@
   filter: grayscale(0%);
   transform: scale(1.05);
   background: radial-gradient(circle, rgb(0, 73, 107) 5%, rgb(0, 24, 15) 90%);
-}
+}/*# sourceMappingURL=menu-lastfall.css.map */

@@ -10,12 +10,17 @@ import { Container } from "react-bootstrap";
 
 export default function PageLastfall() {
   const homeBack = useRef()
-  //const homeLogo = useRef()
+  const homeBackDiv = useRef()
+  const homeLogo = useRef()
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
   useEffect(() => {
     if(isMobile && homeBack.current){
       homeBack.current.style.height = '100vh'
+      homeBackDiv.current.classList.add('moblieBack')
+    } else {
+      homeBack.current.style.height = 'auto';
+      homeBackDiv.current.classList.remove('moblieBack')
     }
   },[isMobile])
   
@@ -71,7 +76,7 @@ export default function PageLastfall() {
         }}
       >   
 
-        <div className="pt-5" >
+        <div className="pt-5" ref={homeBackDiv}>
         <img
           id="video"
           ref={homeBack}
@@ -89,6 +94,7 @@ export default function PageLastfall() {
         <img
           id="logo"
           src="/logo.png"
+          ref={homeLogo}
           alt="Logo"
           style={{
             position: "absolute",
