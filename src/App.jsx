@@ -11,6 +11,7 @@ import Footer from './Components/footer.jsx';
 function App() {
 
 
+
   const Layout = ({ children }) => {
     const location = useLocation();
     const atual = "/lastfall"; 
@@ -26,6 +27,7 @@ function App() {
       </>
     );
   };
+  
   
 
   return (
