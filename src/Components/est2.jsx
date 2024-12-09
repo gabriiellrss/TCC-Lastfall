@@ -177,7 +177,7 @@ function Est2() {
         <h1 className="text-center pb-3">Caracteristicas</h1>
             <Container className="d-flex gap-3 justify-content-center">
               <div className="card" style={{width: '18rem'}}>
-                <img src="./src/assets/citygreen.png" className="card-img-top" />
+                <img src="/citygreen.png" className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -186,7 +186,7 @@ function Est2() {
               </div>
 
               <div className="card" style={{width: '18rem'}}>
-                <img src="./src/assets/citygreen.png" className="card-img-top" />
+                <img src="/citygreen.png" className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -195,7 +195,7 @@ function Est2() {
               </div>
 
               <div className="card" style={{width: '18rem'}}>
-                <img src="./src/assets/citygreen.png" className="card-img-top" />
+                <img src="/citygreen.png" className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -204,7 +204,7 @@ function Est2() {
               </div>
 
               <div className="card" style={{width: '18rem'}}>
-                <img src="./src/assets/citygreen.png" className="card-img-top" />
+                <img src="/citygreen.png" className="card-img-top" />
                 <div className="card-body">
                   <h5 className="card-title">Card title</h5>
                   <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -227,7 +227,7 @@ function Est2() {
           <Row>
             <Col md={6}>
               <img
-                src="public/person/Helton-2.png"
+                src="/person/Helton-2.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded gradiant w-100 img-hover"
               />
@@ -258,7 +258,7 @@ function Est2() {
 
             <Col md={6}>
               <img
-                src="public/person/jeff.png"
+                src="/person/jeff.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded gradiant w-100 img-jeff-hover"
               />
@@ -271,7 +271,7 @@ function Est2() {
           <Row>
             <Col md={6}>
               <img
-                src="public/person/kleber.png"
+                src="/person/kleber.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded gradiant w-100 img-kleber-hover"
               />

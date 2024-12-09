@@ -63,7 +63,7 @@ export default function PageLastfall() {
         <img
           id="video"
 
-          src="/src/assets/fundo.png"
+          src="/fundo.png"
           alt="Imagem de fundo"
           style={{
 
@@ -76,7 +76,7 @@ export default function PageLastfall() {
 
         <img
           id="logo"
-          src="/src/assets/logo.png"
+          src="/logo.png"
           alt="Logo"
           style={{
             position: "absolute",

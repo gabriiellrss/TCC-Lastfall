@@ -82,7 +82,7 @@ export default function Menu() {
       >
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center" href="#" style={{ width: '10rem' }}>
-            <img className="logo" src="src/assets/logos/SVG/GabStudios.svg" alt="Gab Studios" />
+            <img className="logo" src="/logos/SVG/GabStudios.svg" alt="Gab Studios" />
           </a>
           <button
             className="navbar-toggler"

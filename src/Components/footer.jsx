@@ -1,4 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "/src/styles/footer.css"
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -9,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-light py-4">
       <Container className='mb-5 mt-3'>
-        <img className='w-25' src="src/assets/logos/SVG/Ativo 3.svg" alt="" />
+        <img className='w-25' src="/logos/SVG/Ativo 3.svg" alt="" />
       </Container>
       <div className="container">
         
