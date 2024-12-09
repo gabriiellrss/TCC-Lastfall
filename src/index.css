@@ -13,4 +13,11 @@ html {
 
 p::-webkit-scrollbar-button {
     display: none !important; 
-  }
+}
+
+.moblieActive {
+    p, h1, h2{    
+        text-align: center;
+    }
+
+}

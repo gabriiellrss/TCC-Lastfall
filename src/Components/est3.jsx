@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +12,17 @@ function Lastfall() {
   const storyRef = useRef(null);
   const charactersRef = useRef(null);
   const trailerRef = useRef(null);
+
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const homePage = useRef()
+
+
+
+  useEffect(() => {
+    if(isMobile && homePage.current){
+      homePage.current.classList.add('moblieActive')
+    }
+  },[isMobile])
 
   useEffect(() => {
     gsap.fromTo(
@@ -96,7 +108,7 @@ function Lastfall() {
   }, []);
 
   return (
-    <>
+    <div ref={homePage}>
       <Container id="intro" className="my-5" ref={introRef}>
         <Row className="text-center">
           <Col>
@@ -215,11 +227,11 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
 
       <Container>
         <Modal.Dialog>
-          <Modal.Header closeButton>
+          <Modal.Header >
             <Modal.Title>Pronto para jogar?</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>Prepare-se para uma aventura épica em *Lastfall*. Em breve, disponível para todas as plataformas.</p>
+            <p style={{textAlign: 'left'}}>Prepare-se para uma aventura épica em *Lastfall*. Em breve, disponível para todas as plataformas.</p>
           </Modal.Body>
           <Modal.Footer className="gap-3">
             <Button variant="secondary" href="/download">Baixar agora</Button>
@@ -227,7 +239,7 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
           </Modal.Footer>
         </Modal.Dialog>
       </Container>
-    </>
+    </div>
   );
 }
 

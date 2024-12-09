@@ -16,9 +16,9 @@ function App() {
     const location = useLocation();
     const atual = "/lastfall/"; 
   
-    const hideMenu = location.pathname === atual || location.pathname === "/lastfall/desenvolvimento/";
+    const hideMenu = location.pathname === atual || location.pathname === "/lastfall/desenvolvimento/" || location.pathname === '/lastfall' || location.pathname === "/lastfall/desenvolvimento" ;
   
-    const i = location.pathname === atual;
+    const i = location.pathname === atual || location.pathname === '/lastfall';
   
     return (
       <>
