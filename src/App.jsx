@@ -14,7 +14,7 @@ function App() {
 
   const Layout = ({ children }) => {
     const location = useLocation();
-    const atual = "/lastfall"; 
+    const atual = "/lastfall/"; 
   
     const hideMenu = location.pathname === atual || location.pathname === "/lastfall/desenvolvimento";
   
