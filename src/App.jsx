@@ -12,9 +12,9 @@ function App() {
 
   const Layout = ({ children }) => {
     const location = useLocation();
-    const atual = "./lastfall"
+    const atual = "https://www.gabstudios.shop/lastfall"
     var i = true
-    const hideMenu = location.pathname === "./lastfall" || location.pathname === "./lastfall/desenvolvimento";
+    const hideMenu = location.pathname === "https://www.gabstudios.shop/lastfall" || location.pathname === "https://www.gabstudios.shop/lastfall/desenvolvimento";
 
       if(atual === location.pathname) {
         i = true
@@ -35,11 +35,11 @@ function App() {
       <Layout>
         <div>
           <Routes>
-            <Route path="./" element={<Home/>} />
-            <Route path="./home" element={<Home/>} />
-            <Route path="./lastfall" element={<PageLastfall />} />
-            <Route path="./lastfall/desenvolvimento" element={<DevProgress/>} />
-            <Route path="./Contato" element={<Home />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/home" element={<Home/>} />
+            <Route path="/lastfall" element={<PageLastfall />} />
+            <Route path="/lastfall/desenvolvimento" element={<DevProgress/>} />
+            <Route path="/Contato" element={<Home />} />
             <Route path="*" element={<Erro468/>} />
           </Routes>
         </div>
