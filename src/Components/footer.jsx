@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
         <hr className="bg-light" />
         <div className="d-flex justify-content-between align-items-center">
-          <p className="mb-0">© 2024, GabStudios. Todos os direitos reservados.</p>
+          <p className="mb-0">© 2025, GabStudios. Todos os direitos reservados.</p>
           <ul className="list-unstyled d-flex mb-0">
             <li className="ms-3">
               <a href="#" className="text-light">
