@@ -7,6 +7,7 @@ import DevProgress from './pages/desen.jsx';
 import Erro468 from './Components/erro468.jsx';
 import MenuLastfall from './Components/menu-lastfall.jsx';
 import Footer from './Components/footer.jsx';
+import SuperZeGamePage from './pages/superze.jsx';
 
 function App() {
 
@@ -34,9 +35,10 @@ function App() {
     <BrowserRouter>
       <Layout>
         <div>
-          <Routes>
+          <Routes>/superze
             <Route path="/" element={<Home/>} />
             <Route path="/home" element={<Home/>} />
+            <Route path="/superze" element={<SuperZeGamePage/>} />
             <Route path="/lastfall" element={<PageLastfall />} />
             <Route path="/lastfall/desenvolvimento" element={<DevProgress/>} />
             <Route path="/Contato" element={<Home />} />

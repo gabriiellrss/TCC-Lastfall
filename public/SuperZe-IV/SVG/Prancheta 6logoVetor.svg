@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1702 711">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 872.8px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: Game-Font, 'Game Font';
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        fill: #00bfff;
+      }
+
+      .cls-2 {
+        font-size: 391.22px;
+      }
+
+      .cls-3, .cls-4 {
+        font-size: 180.8px;
+      }
+
+      .cls-4, .cls-6 {
+        fill: #2c2f33;
+      }
+
+      .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(.2 1296.56)"><tspan x="0" y="0">SuperZe</tspan></text>
+  <rect class="cls-5" x="614" y="-241" width="667" height="667"/>
+  <rect class="cls-6" x="-44" y="-241" width="667" height="667"/>
+  <text class="cls-2" transform="translate(81.67 637.19)"><tspan x="0" y="0">Cores</tspan></text>
+  <text class="cls-4" transform="translate(661.01 363.95)"><tspan x="0" y="0">#00BFFF</tspan></text>
+  <text class="cls-3" transform="translate(25.01 363.95)"><tspan x="0" y="0">#00BFFF</tspan></text>
+</svg>

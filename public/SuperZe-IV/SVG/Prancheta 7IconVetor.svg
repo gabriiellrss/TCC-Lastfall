@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00bfff;
+        stroke-miterlimit: 10;
+        stroke-width: 13px;
+      }
+
+      .cls-2 {
+        fill: #2c2f33;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="1" y="1" width="399" height="399" rx="15" ry="15"/>
+  <rect class="cls-1" x="1" y="1" width="401" height="401" rx="41" ry="41"/>
+  <image width="73" height="121" transform="translate(102 17) scale(2.93)" xlink:href="../../SPZE-ezgif.com-crop (1).png"/>
+</svg>

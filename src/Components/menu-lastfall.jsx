@@ -78,16 +78,16 @@ export default function MenuLastfall({active}) {
             Game
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="/lastfall#">Lastfall</a></li>
-            <li><a className="dropdown-item" href="/lastfall#sobreojogo">Sobre o Jogo</a></li>
-            <li><a className="dropdown-item" href="/lastfall#quemsomos">Quem Somos</a></li>
-            <li><a className="dropdown-item" href="/lastfall#sinopse">Sinopse</a></li>
-            <li><a className="dropdown-item" href="/lastfall#caracteristicas">Caracteristicas</a></li>
-            <li><a className="dropdown-item" href="/lastfall#persons">Personagens</a></li>
-            <li><a className="dropdown-item" href="/lastfall#trailer">Trailer</a></li>
-            <li><a className="dropdown-item" href="/lastfall#jogabilidade">Jogabilidade</a></li>
-            <li><a className="dropdown-item" href="/lastfall#historia">Historia</a></li>
-            <li><a className="dropdown-item" href="/lastfall#fale">Fale Conosco</a></li>
+            <li><a className="dropdown-item" href="/lastfall">Lastfall</a></li>
+            <li><a className="dropdown-item" href="#sobreojogo">Sobre o Jogo</a></li>
+            <li><a className="dropdown-item" href="#quemsomos">Quem Somos</a></li>
+            <li><a className="dropdown-item" href="#sinopse">Sinopse</a></li>
+            <li><a className="dropdown-item" href="#caracteristicas">Caracteristicas</a></li>
+            <li><a className="dropdown-item" href="#persons">Personagens</a></li>
+            <li><a className="dropdown-item" href="#trailer">Trailer</a></li>
+            <li><a className="dropdown-item" href="#jogabilidade">Jogabilidade</a></li>
+            <li><a className="dropdown-item" href="#historia">Historia</a></li>
+            <li><a className="dropdown-item" href="#fale">Fale Conosco</a></li>
 
 
 

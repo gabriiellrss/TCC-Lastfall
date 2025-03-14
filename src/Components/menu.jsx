@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '/src/styles/menu.css';
 import '/src/styles/menu.scss';
 import gsap from 'gsap';
 
 
 export default function Menu() {
+  const [imageSrc, setImageSrc] = useState("/SuperZe-IV/SVG/SuperZe2_1logoVetor.svg");
 
 
   useEffect(() => {
 
-
+    const brandSuperZe = document.getElementById('brandSuperZe')
     const brand = document.querySelector('.lastfall-brand');
     const navBar = document.querySelector('#navBar');
     const brandBack = document.querySelector('#brand-back')
@@ -19,6 +20,14 @@ export default function Menu() {
     });
 
     brand.addEventListener('mouseout', () => {
+      navBar.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; 
+    });
+
+    brandSuperZe.addEventListener('mouseover', () => {
+      navBar.style.backgroundColor = 'rgba(0, 153, 255, 0.4)'; 
+    });
+
+    brandSuperZe.addEventListener('mouseout', () => {
       navBar.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'; 
     });
 
@@ -119,7 +128,7 @@ export default function Menu() {
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Last
+                      Lastfall
                     </a>
                   </li>
                   <li>
@@ -169,6 +178,20 @@ export default function Menu() {
                   </svg>
                 </a>
               </li>
+              <a id='brand-back' href='/superze' className="nav-item d-flex justify-content-center" style={{ width: '5rem' }}>
+                <img
+                  id={'brandSuperZe'}
+                  src={imageSrc}
+                  alt="SuperZe Logo"
+                  className=' nav-link'
+                  onMouseEnter={() => setImageSrc("/SuperZe-IV/SVG/Prancheta 5logoVetor.svg")} // Muda a imagem ao passar o mouse
+                  onMouseLeave={() => setImageSrc("/SuperZe-IV/SVG/SuperZe2_1logoVetor.svg")} // Volta ao normal ao sair
+                  style={{
+                    transition: "opacity 0.5s ease-in-out", // Adiciona a transição
+                    opacity: 1, // Começa visível
+                  }}
+                />
+              </a>
             </ul>
           </div>
         </div>
