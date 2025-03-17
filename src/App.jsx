@@ -35,7 +35,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <div>
-          <Routes>/superze
+          <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/home" element={<Home/>} />
             <Route path="/superze" element={<SuperZeGamePage/>} />
