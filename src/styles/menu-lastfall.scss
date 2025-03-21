@@ -28,6 +28,18 @@
   mask-composite: intersect;
 }
 
+#video2{
+  object-fit: cover;
+
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, rgb(0, 0, 0) 30%) 
+  ;
+  mask-image: linear-gradient(to top, transparent 0%, rgb(0, 0, 0) 30%) 
+  ;
+
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+}
+
 .gradiant{
   object-fit: cover;
 

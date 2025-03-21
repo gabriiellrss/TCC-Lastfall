@@ -20,10 +20,14 @@ function App() {
     const hideMenu = location.pathname === atual || location.pathname === "/lastfall/desenvolvimento/" || location.pathname === '/lastfall' || location.pathname === "/lastfall/desenvolvimento" ;
   
     const i = location.pathname === atual || location.pathname === '/lastfall';
+
+    const hideMenuZe = location.pathname === atual || location.pathname === "/superze";
+  
+    const z = location.pathname === atual || location.pathname === '/lastfall';
   
     return (
       <>
-        {hideMenu ? <MenuLastfall active={i}/> : <Menu />}
+        {hideMenu ? <MenuLastfall active={i}/>: hideMenuZe? null : <Menu />}
         {children}
       </>
     );
