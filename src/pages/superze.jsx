@@ -210,7 +210,6 @@ const handleDownload = () => {
   
         <section ref={downloadRef} id="download" className="text-center py-5 bg-dark text-white">
           <h2>BAIXE AGORA</h2>
-          <p>Requisitos Mínimos: Windows 10/11 | 4GB RAM | 2GB VRAM</p>
           <button onClick={() => handleDownload()} className="btn btn-success btn-lg">DOWNLOAD GRATUITO</button>
         </section>
       </section>
