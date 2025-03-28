@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import ScrollReveal from "../Components/ScrollReveal";
 import TiltedCard from "../Components/TiltedCard";
 import Orb from "../Components/Orb";
+import PageSuperZe from "./PageSuperZe";
 
 
 const handleDownload = () => {
@@ -50,19 +51,19 @@ const handleDownload = () => {
           }
         })
     
-        .to("#logo", {
+        .to("#logo2", {
             duration: 0.5,
             y: 25,
             opacity: 0,
             ease: "power2.out",
             onComplete: () => {
-              gsap.to("#logo", {
+              gsap.to("#logo2", {
                 duration: 1,
                 opacity: 1,
                 y: 0, // Corrigido de translateY para y
                 ease: "power2.inOut",
                 onComplete: () => {
-                  gsap.to("#logo", {
+                  gsap.to("#logo2", {
                     y: 25, // Ajuste fino para o efeito de flutuação
                     repeat: -1,
                     yoyo: true,
@@ -107,8 +108,8 @@ const handleDownload = () => {
               </div>
 
               <img
-                id="logo"
-                src="\SuperZe-IV\SVG\Prancheta 5logoVetor.svg"
+                id="logo2"
+                src="/SuperZe-IV/4x/Prancheta 5logoPng4x.png"
                 ref={homeLogo}
                 alt="Logo"
                 style={{
@@ -130,88 +131,14 @@ const handleDownload = () => {
               enableBlur={true}
               baseRotation={5}
               blurStrength={10}
+              
             >
-              Está preparado para enfrentar o maior inimigo do sistema? Venha conosco!
+              Esta preparado para enfrentar o maior inimigo do sistema? Venha jogar com a gente!
             </ScrollReveal>
         </div>
 
-        <div className="w-75 m-auto d-flex justify-content-center align-items-center">
-            <TiltedCard
-              imageSrc="https://th.bing.com/th/id/OIP.g4I4pjbjXi9VVhjFXNaDQQHaGi?rs=1&pid=ImgDetMain"
-              altText="Kendrick Lamar - GNX Album Cover"
-              captionText="The Weeknd - After Hours"
-              containerHeight="300px"
-              containerWidth="300px"
-              imageHeight="300px"
-              imageWidth="300px"
-              rotateAmplitude={12}
-              scaleOnHover={1.2}
-              showMobileWarning={false}
-              showTooltip={true}
-              displayOverlayContent={false}
-              overlayContent={
-                <p className="tilted-card-demo-text">
-                  Kendrick Lamar - GNX
-                </p>
-              }
-            />
+        <PageSuperZe/>
 
-            <div style={{ width: "50%", height: "600px", position: "relative" }}>
-              <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
-              <p
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  color: "white", // Ajuste conforme o fundo
-                  fontSize: "1.5rem",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                }}
-              >
-                Ouvir música
-              </p>
-            </div>
-
-  
-        </div>
-
-  
-        <section ref={gameplayRef} id="jogabilidade" className="container my-5">
-          <div className="row g-4">
-            <div className="col-md-6 bg-secondary text-white p-4 rounded">
-              <h3>⚡ SISTEMA DE COMBATE</h3>
-              <ul>
-                <li>► DRIVE PUNCH - Alternativa de ataque</li>
-                <li>► DRIVE STRETCH - Habilidade especial</li>
-                <li>► PEN DRIVE - Arma principal</li>
-              </ul>
-            </div>
-            <div className="col-md-6 bg-danger bg-opacity-25 text-white p-4 rounded">
-              <h3>👾 INIMIGOS</h3>
-              <div className="border p-3 mb-3 border-danger rounded">
-                <h4>TROJAN HORSE</h4>
-                <p>Discreto e perigoso, abre portas para invasões</p>
-              </div>
-              <div className="border p-3 border-danger rounded">
-                <h4>RANSOMWARE</h4>
-                <p>Criptografa dados e exige resgate</p>
-              </div>
-            </div>
-          </div>
-        </section>
-  
-        <section ref={characterRef} id="personagem" className="container text-center my-5 p-4 bg-secondary text-white rounded">
-          <h2>SUPER ZÉ</h2>
-          <p>A última esperança do sistema</p>
-          <img src="spze.png" alt="Super Zé" className="img-fluid rounded shadow-lg border border-success" style={{ maxWidth: "400px" }} />
-        </section>
-  
-        <section ref={downloadRef} id="download" className="text-center py-5 bg-dark text-white">
-          <h2>BAIXE AGORA</h2>
-          <button onClick={() => handleDownload()} className="btn btn-success btn-lg">DOWNLOAD GRATUITO</button>
-        </section>
       </section>
     );
   }

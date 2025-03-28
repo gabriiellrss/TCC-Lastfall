@@ -8,6 +8,7 @@ import Erro468 from './Components/erro468.jsx';
 import MenuLastfall from './Components/menu-lastfall.jsx';
 import Footer from './Components/footer.jsx';
 import SuperZeGamePage from './pages/superze.jsx';
+import MenuSuperZe from './Components/menu-superze.jsx';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
   
     return (
       <>
-        {hideMenu ? <MenuLastfall active={i}/>: hideMenuZe? null : <Menu />}
+        {hideMenu ? <MenuLastfall active={i}/>: hideMenuZe? <MenuSuperZe active={z}/> : <Menu />}
         {children}
       </>
     );

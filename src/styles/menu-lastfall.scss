@@ -13,8 +13,18 @@
 #navBar-lastfall:hover {
   opacity: 1 !important;
 
+}
+
+.navbar-superze-active{
+  opacity: 1 !important;
+}
+
+#navBar-superze:hover {
+opacity: 1 !important;
 
 }
+
+
 
 #video{
   object-fit: cover;
@@ -104,4 +114,12 @@
   transform: scale(1.05); 
   background: radial-gradient(circle, rgb(0, 73, 107) 5%, rgb(0, 24, 15) 90%);
   
+}
+
+.superze-menu:hover{
+  color: yellow !important;
+}
+
+.superze-menu:active{
+  color: rgb(233, 233, 0) !important;
 }

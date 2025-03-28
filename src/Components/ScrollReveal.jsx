@@ -102,7 +102,7 @@ const ScrollReveal = ({
 
   return (
     <h2 ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <p className={`scroll-reveal-text ${textClassName}`}>{splitText}</p>
+      <p style={{fontSize: "5.5rem"}} className={`scroll-reveal-text font-custom2 text-center  ${textClassName}`}>{splitText}</p>
     </h2>
   );
 };

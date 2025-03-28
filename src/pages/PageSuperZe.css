@@ -1,0 +1,196 @@
+:root {
+    --neon-green: #46BEFE;
+    --cyber-red: #ff073a;
+    --dark-bg: #0a0a0f;
+    --glitch-duration: 2s;
+}
+
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent 0%,
+        rgba(20, 141, 255, 0.05) 50%,
+        transparent 100%);
+    pointer-events: none;
+    animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    color: var(--neon-green);
+    text-shadow: 0 0 30px var(--neon-green);
+    margin-bottom: 1.5rem;
+    animation: glitch var(--glitch-duration) infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.gameplay-preview {
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 3px solid var(--neon-green);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(20, 228, 255, 0.2);
+    position: relative;
+}
+
+.gameplay-preview video {
+    width: 100%;
+    display: block;
+}
+
+.gameplay-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    position: relative;
+}
+
+.game-feature, .enemies-showcase {
+    background: rgba(20, 20, 30, 0.9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(20, 161, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.game-feature h3, .enemies-showcase h3 {
+    color: var(--neon-green);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.enemy-card {
+    background: rgba(255, 7, 58, 0.1);
+    border: 1px solid var(--cyber-red);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.enemy-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(255, 7, 58, 0.2);
+}
+
+.character-card {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background: rgba(20, 20, 30, 0.9);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    border: 2px solid var(--neon-green);
+}
+
+.character-card img {
+    width: 100%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px var(--neon-green));
+}
+
+.download-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(45deg, rgba(10, 10, 15, 0.9), rgba(20, 20, 30, 0.9));
+}
+
+.download-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--neon-green), #46BEFE);
+    padding: 1.5rem 3rem;
+    font-size: 1.3rem;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.download-btn:hover::before {
+    left: 100%;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px var(--neon-green);
+}
+
+@media (max-width: 768px) {
+    .gameplay-section {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .character-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.font-SuperZe-download {
+    font-size: 3.5rem;
+}

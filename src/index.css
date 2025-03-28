@@ -3,9 +3,19 @@
     src: url(/src/assets/fonts/breakaway.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: secondary;
+    src: url(src/assets/fonts/fontSecond2.ttf) format('truetype');
+}
+
 .font-custom {
     font-family: primary;
 }
+
+.font-custom2 {
+    font-family: secondary;
+}
+
 
 html {
     scroll-behavior: smooth;
