@@ -111,7 +111,7 @@ function Est2() {
             </Col>
             <Col md={6}>
               <img
-                src="public\logo.png"
+                src="\logo.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded"
               />
@@ -162,7 +162,7 @@ function Est2() {
 
             <Col md={6} >
               <img
-                src="public\citygreen.png"
+                src="/citygreen.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded"
               />
@@ -373,7 +373,7 @@ function Est2() {
             <Row>
               <Col md={6}>
                 <img
-                  src="public\imgs\7de23623-b40b-4d4e-a8f2-5ddf4892ccd3-removebg-preview.png"
+                  src="\imgs\7de23623-b40b-4d4e-a8f2-5ddf4892ccd3-removebg-preview.png"
                   alt="Imagem do jogo"
                   className="img-fluid rounded gradiant w-100 img-kleber-hover"
                 />

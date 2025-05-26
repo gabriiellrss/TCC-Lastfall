@@ -141,7 +141,7 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
           </Col>
           <Col md={6}>
             <img
-              src="public\imgs\image.png"
+              src="\imgs\image.png"
               alt="Gameplay"
               className="img-fluid rounded shadow-sm"
             />
@@ -168,7 +168,7 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
             <Card className="shadow-lg mb-4">
               <Card.Img
                 variant="top"
-                src="public\imgs\7de23623-b40b-4d4e-a8f2-5ddf4892ccd3-removebg-preview.png"
+                src="\imgs\7de23623-b40b-4d4e-a8f2-5ddf4892ccd3-removebg-preview.png"
                 alt="Personagem 1"
               />
               <Card.Body>
@@ -183,7 +183,7 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
             <Card className="shadow-lg mb-4">
               <Card.Img
                 variant="top"
-                src="public\imgs\Suporte_Mach_Create_a_female_character._With_the_features_of_a_74818940-fcf3-4594-9e77-d118a642b26c.png"
+                src="\imgs\Suporte_Mach_Create_a_female_character._With_the_features_of_a_74818940-fcf3-4594-9e77-d118a642b26c.png"
                 alt="Personagem 2"
               />
               <Card.Body>
@@ -198,7 +198,7 @@ Será Cleber capaz de desvendar os segredos que moldaram sua existência e encon
             <Card className="shadow-lg mb-4">
               <Card.Img
                 variant="top"
-                src="public\imgs\Helton-pose-sigma.png"
+                src="\imgs\Helton-pose-sigma.png"
                 alt="Personagem 3"
               />
               <Card.Body>
