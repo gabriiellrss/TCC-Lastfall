@@ -111,7 +111,7 @@ function Est2() {
             </Col>
             <Col md={6}>
               <img
-                src="https://via.placeholder.com/500x300"
+                src="public\logo.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded"
               />
@@ -162,7 +162,7 @@ function Est2() {
 
             <Col md={6} >
               <img
-                src="https://via.placeholder.com/500x300"
+                src="public\citygreen.png"
                 alt="Imagem do jogo"
                 className="img-fluid rounded"
               />
@@ -182,7 +182,7 @@ function Est2() {
         </Container>
       </section>
 
-      <section
+      {/*<section
         id="features"
         className="bg-black py-5"
         ref={(el) => (sectionsRefs.current[4] = el)}
@@ -236,7 +236,7 @@ function Est2() {
             </div>
           </div>
         </Container>
-      </section>
+      </section>*/}
 
       {
         isMobile ? (
@@ -373,7 +373,7 @@ function Est2() {
             <Row>
               <Col md={6}>
                 <img
-                  src="/person/kleber.png"
+                  src="public\imgs\7de23623-b40b-4d4e-a8f2-5ddf4892ccd3-removebg-preview.png"
                   alt="Imagem do jogo"
                   className="img-fluid rounded gradiant w-100 img-kleber-hover"
                 />
